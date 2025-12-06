@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>09/12 — Nosso Compromisso</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <style>
+    :root {
+        --cor_texto: #ff3232;
+    }
+
+    html, body {
+      height: 100%;
+      position: relative;
+    }
+
+    header, section, footer {
+      position: relative;
+      z-index: 10;
+    }
+
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #180000;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    header {
+      margin-top: 30px;
+      text-align: center;
+      animation: floatHearts 3s infinite ease-in-out;
+    }
+
+    h2 {
+      color: #ffe4e4;
+      margin-top: 0;
+      text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+    }
+
+    .sunflower {
+      font-size: 5rem;
+    }
+
+    .titulo {
+      font-size: 2.4rem;
+      margin: 0;
+      letter-spacing: 1px;
+    }
+    
+    section {
+      max-width: 500px;
+      margin: 0px auto;
+      padding: 0 18px;
+      margin-top: 20px;
+    }
+
+    .foto {
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
+
+    .card {
+      background: #3d0000;
+      border-left: 4px solid var(--cor_texto);
+      padding: 22px;
+      margin-bottom: 26px;
+      border-radius: 10px;
+      box-shadow: 0 0 14px rgba(255, 102, 102, 0.25);
+      animation: slideUp 1s ease;
+    }
+
+    .timeline {
+      border-left: 3px solid var(--cor_texto);
+      margin-left: 15px;
+      padding-left: 20px;
+    }
+
+    .timeline div {
+      margin: 22px 0;
+      position: relative;
+      animation: fadeIn 1s ease;
+    }
+
+    .timeline div::before {
+      content: '';
+      width: 12px;
+      height: 12px;
+      background: var(--cor_texto);
+      border-radius: 50%;
+      position: absolute;
+      left: -29px;
+      top: 3px;
+    }
+
+    .photo {
+      width: 100%;
+      border-radius: 20px;
+      box-shadow: 0 0 12px rgba(255, 102, 102, 0.35);
+      animation: fadeIn 1.2s ease;
+    }
+
+    .descricao {
+        color: #ff8282;
+        font-size: 0.7rem;
+        padding: 7px 7px;
+        border-bottom: 1px solid #ff8282;
+        border-radius: 20px;
+    }
+
+    .labels {
+      color: #ffb0b0;
+      font-size: 1.5rem;
+      margin-left: 15px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 35px 20px;
+      color: #ff9999;
+      font-size: 0.9rem;
+    }
+
+    /*****************função coração**********/
+
+    .hearts {
+      font-size: 2em;
+      animation: floatHearts 3s infinite ease-in-out;
+      margin-top: 15px;
+    }
+
+    .heart {
+      position: fixed;
+      color: rgba(255, 0, 0, 0.287);
+      font-size: 45px;
+      opacity: 0.8;
+      animation: floatUp 3s ease-in forwards;
+      pointer-events: none;
+      z-index: 11;
+    }
+
+    .background-hearts {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+      overflow: hidden;
+      pointer-events: none;
+    }
+
+
+    .background-hearts span {
+      position: absolute;
+      display: block;
+      color: rgba(255, 255, 255, 0.3);
+      font-size: 20px;
+      animation: float 10s linear infinite;
+    }
+
+    @keyframes floatHearts {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+    }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(0) scale(1);
+        opacity: 0.8;
+      }
+      100% {
+        transform: translateY(-200px) scale(1.5);
+        opacity: 0;
+      }
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-10vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    /***************************************/
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(25px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body onclick="createHeart(event)">
+    <div class="background-hearts" id="bg-hearts"></div>
+    
+  <header>
+    <span class="sunflower">🌻</span>
+    <h2 class="titulo">09/12</h2>
+    <h2>O Dia Que Se Tornou Escolha!!</h2>
+  </header>
+
+  <section>
+    <div class="foto">
+      <img src="fotos/primeiro_dia_namorados.jpg" alt="Foto de vocês 12/09" class="photo" />
+      <span class="descricao">1° dia dos namorados juntos 12/06/25</span>
+    </div>
+  </section>
+
+  <section>
+    <div class="card">
+      <h2>O que aprendi desde então:</h2>
+      <p>Aprendi que meu proposito é está contigo para te fazer a mulher mais feliz do mundo, pois com você sorrindo, achei minha verdadeira felicidade!!</p>
+    </div>
+  </section>
+
+
+
+  <section>
+    <h2>Linha do tempo ⌛</h2>
+    <div class="timeline">
+      <div><b class="labels">O começo</b><br><br> Eu não esperava nada… mas você apareceu como quem muda a atmosfera sem fazer esforço!! Não foi só beleza, foi aquele brilho calmo, aquela presença que faz o coração prestar atenção!!</div>
+      <div><b class="labels">Coragem improvável</b><br><br>Demorei para mandar mensagem porque você não era alguém para tratar com leveza!! Era como se eu soubesse que, se eu entrasse na sua vida, eu ia querer ficar, isso exigia coragem!!</div>
+      <div><b class="labels">Primeira tentativa</b><br><br>A primeira mensagem não deu certo… mas aquilo não foi um obstáculo, foi uma amostra que você não era uma pessoa fácil e um sinal de que eu precisava insistir!! Tinha algo em você que eu não queria deixar escapar por hesitação!!</div>
+      <div><b class="labels">Conversas que mudaram tudo</b><br><br>Quando nossas conversas finalmente aconteceram, eu percebi rápido que não era algo comum!! Havia profundidade, sinceridade e um jeito seu que não se compara com o de ninguém, era diferente demais para ignorar!!</div>
+      <div><b class="labels">Certeza nasceu firme</b><br><br>Foi te ouvindo, entendendo sua história, seus princípios, sua força… que a certeza surgiu!! Não daquela paixão impulsiva que dura pouco, mas daquela calma que diz: “é ela”!!</div>
+      <div><b class="labels">09/12/2024</b><br><br>Aquele dia não foi apenas o início do nosso namoro, foi o dia em que eu escolhi você com consciência, com verdade e com o coração inteiro!! A melhor escolha da minha vida!!</div>
+      <div><b class="labels">E desde então…</b><br><br>Cada dia ao seu lado só confirma o que meu coração já sabia!! Quanto mais eu te conheço, mais eu quero ficar; Quanto mais caminhamos, mais clareza eu tenho do futuro que quero construir contigo!!</div>
+    </div>
+
+    <video src="fotos/primeiro_registro.mp4" alt="6/10" class="photo" controls></video>
+    <span class="descricao">&#8627; Primeiro registro nosso junto 29/08/24</span>
+  </section>
+
+  <section>
+    <h2>Compromissos que assumo contigo:</h2>
+
+    <div class="card">
+      <strong>1. Constância</strong>
+      <p>Escolho permanecer presente e firme mesmo nos momentos difíceis, porque compromisso verdadeiro se prova na continuidade, não na facilidade!!</p>
+    </div>
+
+    <div class="card">
+      <strong>2. Transparência</strong>
+      <p>Enfrento conversas desconfortáveis sem adiamento, especialmente quando algo pode afetar nossa relação!! Prefiro manter o vínculo saudável do que um desgate de algum de nós!!</p>
+    </div>
+
+    <div class="card">
+      <strong>3. Responsabilidade</strong>
+      <p>Assumo o esforço necessário, inclusive o que exige renúncia, para construir o futuro que desejamos!! Prosperidade é resultado de disciplina, não de espera!!</p>
+    </div>
+  </section>
+
+  <footer>
+    ❤️ For all life!!!
+  </footer>
+
+
+
+
+
+  <script>
+    function createHeart(event) {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      heart.textContent = '❤';
+      heart.style.left = `${event.clientX - 30}px`;
+      heart.style.top = `${event.clientY - 30}px`;
+      document.body.appendChild(heart);
+
+      setTimeout(() => {
+        heart.remove();
+      }, 3000);
+    }
+
+    function spawnFloatingHearts() {
+      const container = document.getElementById('bg-hearts');
+      for (let i = 0; i < 30; i++) {
+        const span = document.createElement('span');
+        span.textContent = '🌻';
+        span.style.left = Math.random() * 100 + 'vw';
+        span.style.fontSize = Math.random() * 20 + 10 + 'px';
+        span.style.animationDuration = (Math.random() * 5 + 5) + 's';
+        span.style.animationDelay = Math.random() * 5 + 's';
+        container.appendChild(span);
+      }
+    }
+
+    spawnFloatingHearts();
+  </script>
+
+</body>
+</html>
