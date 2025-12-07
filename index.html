@@ -29,6 +29,10 @@
       overflow-x: hidden;
     }
 
+    body::-webkit-scrollbar {
+      width: 0.1px;
+    }
+
     header {
       margin-top: 30px;
       text-align: center;
@@ -49,6 +53,18 @@
       font-size: 2.4rem;
       margin: 0;
       letter-spacing: 1px;
+    }
+
+    .texto-inicio {
+      background: #230202;
+      border-bottom: 5px solid var(--cor_texto);
+      border-top: 5px solid var(--cor_texto);
+      padding: 22px;
+      margin-top: 40px;
+      margin-bottom: 26px;
+      border-radius: 30px;
+      box-shadow: 0 0 14px rgb(218, 0, 0);
+      animation: slideUp 1s ease;
     }
     
     section {
@@ -92,8 +108,8 @@
       background: var(--cor_texto);
       border-radius: 50%;
       position: absolute;
-      left: -29px;
-      top: 3px;
+      left: -27.5px;
+      top: 0px;
     }
 
     .photo {
@@ -101,6 +117,7 @@
       border-radius: 20px;
       box-shadow: 0 0 12px rgba(255, 102, 102, 0.35);
       animation: fadeIn 1.2s ease;
+      margin-bottom: -5px;
     }
 
     .descricao {
@@ -109,6 +126,8 @@
         padding: 7px 7px;
         border-bottom: 1px solid #ff8282;
         border-radius: 20px;
+        animation: fadeIn 1.2s cubic-bezier(0.57, 0.63, 0.31, 1.05);
+        font-weight: 600;
     }
 
     .labels {
@@ -134,8 +153,8 @@
 
     .heart {
       position: fixed;
-      color: rgba(255, 0, 0, 0.287);
-      font-size: 45px;
+      color: rgb(255, 0, 0);
+      font-size: 65px;
       opacity: 0.8;
       animation: floatUp 3s ease-in forwards;
       pointer-events: none;
@@ -208,21 +227,24 @@
     
   <header>
     <span class="sunflower">🌻</span>
-    <h2 class="titulo">09/12</h2>
-    <h2>O Dia Que Se Tornou Escolha!!</h2>
+    <i>
+      <h2 class="titulo">09/12</h2>
+      <h2>O dia que se tornou escolha!!</h2>
+    </i>
   </header>
 
   <section>
     <div class="foto">
-      <img src="primeiro_dia_namorados.jpg" alt="Foto de vocês 12/09" class="photo" />
-      <span class="descricao">&#8627; 1° dia dos namorados juntos 12/06/25</span>
+      <img src="primeiro_dia_namorados.jpg" alt="Dia dos namorados 12/06" class="photo" />
+      <span class="descricao">&#8627; Nosso 1° dia dos namorados 12/06/25</span>
     </div>
   </section>
 
   <section>
-    <div class="card">
-      <h2>O que aprendi desde então:</h2>
-      <p>Aprendi que meu proposito é está contigo para te fazer a mulher mais feliz do mundo, pois com você sorrindo, achei minha verdadeira felicidade!!</p>
+    <div class="texto-inicio">
+      <h2>Feliz 1 ano, minha querida!! 🎉</h2>
+      <p>Esse primeiro ano ao seu lado me mostrou que o amor não é apenas um sentimento bonito; é escolha diária, é cuidado, é verdade, é respeito… e tudo isso você faz com uma leveza que me orgulha!! </p>
+      <p>Você é gentil de um jeito que ilumina qualquer ambiente, sincera de um jeito que traz paz, e forte de um jeito que me inspira a ser melhor todos os dias!!</p>
     </div>
   </section>
 
@@ -240,8 +262,8 @@
       <div><b class="labels">E desde então…</b><br><br>Cada dia ao seu lado só confirma o que meu coração já sabia!! Quanto mais eu te conheço, mais eu quero ficar; Quanto mais caminhamos, mais clareza eu tenho do futuro que quero construir contigo!!</div>
     </div>
 
-    <video src="primeiro_registro.mp4" alt="6/10" class="photo" controls></video>
-    <span class="descricao">&#8627; Primeiro registro nosso junto 29/08/24</span>
+    <video src="primeiro_registro.mp4" alt="Primeiro registro 6/10" class="photo" controls></video>
+    <span class="descricao">&#8627; 1° registro de nós juntos 29/08/24</span>
   </section>
 
   <section>
@@ -303,4 +325,3 @@
 
 </body>
 </html>
-
